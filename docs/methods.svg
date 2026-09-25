@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Root-finding methods implemented in Numerical Analysis – Get Root</title>
+  <rect x="0.5" y="0.5" width="799" height="499" rx="16" fill="#ffffff" stroke="#d0d7de"/>
+
+  <text x="30" y="48" font-size="22" font-weight="700" fill="#1f2328">Numerical Analysis – Get Root</text>
+  <text x="30" y="74" font-size="14" fill="#57606a">Root-finding methods in a C# WinForms app. Enter f(x), the starting values and a tolerance ε.</text>
+
+  <!-- Row 1 -->
+  <g>
+    <rect x="30" y="96" width="360" height="112" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+    <rect x="30" y="96" width="6" height="112" rx="3" fill="#0969da"/>
+    <text x="50" y="124" font-size="17" font-weight="700" fill="#1f2328">Bisection</text>
+    <text x="50" y="150" font-size="14" fill="#1f2328">xr = (xl + xu) / 2, keep the half with a sign change</text>
+    <text x="50" y="172" font-size="13" fill="#57606a">Inputs: xl, xu, ε · stops when |xu − xl| &lt; ε</text>
+    <text x="50" y="194" font-size="13" fill="#1a7f37">Iteration table with relative error %</text>
+  </g>
+  <g>
+    <rect x="410" y="96" width="360" height="112" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+    <rect x="410" y="96" width="6" height="112" rx="3" fill="#0969da"/>
+    <text x="430" y="124" font-size="17" font-weight="700" fill="#1f2328">False Position</text>
+    <text x="430" y="150" font-size="14" fill="#1f2328">xr = (xl·f(xu) − xu·f(xl)) / (f(xu) − f(xl))</text>
+    <text x="430" y="172" font-size="13" fill="#57606a">Inputs: xl, xu, ε · stops when |f(xr)| &lt; ε</text>
+    <text x="430" y="194" font-size="13" fill="#1a7f37">Iteration table with relative error %</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g>
+    <rect x="30" y="224" width="360" height="112" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+    <rect x="30" y="224" width="6" height="112" rx="3" fill="#8250df"/>
+    <text x="50" y="252" font-size="17" font-weight="700" fill="#1f2328">Newton-Raphson</text>
+    <text x="50" y="278" font-size="14" fill="#1f2328">xₙ₊₁ = xₙ − f(xₙ) / f′(xₙ)</text>
+    <text x="50" y="300" font-size="13" fill="#57606a">f′ by central difference (h = 0.0001) · stops at |Δx| &lt; ε</text>
+    <text x="50" y="322" font-size="13" fill="#1a7f37">Iteration table with f(x) and f′(x)</text>
+  </g>
+  <g>
+    <rect x="410" y="224" width="360" height="112" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+    <rect x="410" y="224" width="6" height="112" rx="3" fill="#8250df"/>
+    <text x="430" y="252" font-size="17" font-weight="700" fill="#1f2328">Secant</text>
+    <text x="430" y="278" font-size="14" fill="#1f2328">xₙ₊₁ = xₙ − f(xₙ)(xₙ − xₙ₋₁) / (f(xₙ) − f(xₙ₋₁))</text>
+    <text x="430" y="300" font-size="13" fill="#57606a">Inputs: x₋₁, x₀, ε · stops on relative change &lt; ε</text>
+    <text x="430" y="322" font-size="13" fill="#57606a">Shows the root only (no iteration rows)</text>
+  </g>
+
+  <!-- Row 3 -->
+  <g>
+    <rect x="30" y="352" width="360" height="112" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+    <rect x="30" y="352" width="6" height="112" rx="3" fill="#9a6700"/>
+    <text x="50" y="380" font-size="17" font-weight="700" fill="#1f2328">“Simple Fixed” button</text>
+    <text x="50" y="406" font-size="14" fill="#1f2328">Takes x₀ and ε, iterates until |Δx| &lt; ε</text>
+    <text x="50" y="428" font-size="13" fill="#57606a">Current code applies the Newton update, not g(x)</text>
+    <text x="50" y="450" font-size="13" fill="#57606a">Shows the root only (no iteration rows)</text>
+  </g>
+  <g>
+    <rect x="410" y="352" width="360" height="112" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-dasharray="5 4"/>
+    <text x="430" y="380" font-size="17" font-weight="700" fill="#1f2328">Expression input</text>
+    <text x="430" y="406" font-size="14" fill="#1f2328">Variable x, ^ for powers, constants pi and e</text>
+    <text x="430" y="428" font-size="13" fill="#57606a">Evaluated with DataTable.Compute</text>
+    <text x="430" y="450" font-size="13" fill="#57606a">f(x) values are rounded to 3 decimal places</text>
+  </g>
+</svg>
